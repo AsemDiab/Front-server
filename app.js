@@ -5,8 +5,8 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 
-const CATALOG_SERVICE_URL = 'http://localhost:5001';
-const ORDER_SERVICE_URL = 'http://localhost:5002';
+const CATALOG_SERVICE_URL = process.env.CARALOG_URL;;
+const ORDER_SERVICE_URL = process.env.ORDER_URL;;
 
 // Search for books by topic
 app.get('/search/:topic', async (req, res) => {
